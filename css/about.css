@@ -1,0 +1,185 @@
+*{ margin: 0; }
+
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color:white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background: #ddd;
+  color: black;
+}
+
+
+#myBtn {
+  padding: 10px 10px;
+  background-color: #333;
+  color: white;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+#myBtn:hover {
+  background-color: #b3d4fc;
+}
+
+
+/*social media css*/
+
+
+.social {
+  background: #222;
+  background-size: cover;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  top: 70em;
+  text-align: center;
+  transform: translateY(-50%);
+}
+
+.social .link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px dashed white;
+  background-clip: content-box;
+  padding: 10px;
+  transition: .5s;
+  color: #D7D0BE;
+  margin-left: 15px;
+  margin-right: 15px;
+  font-size: 50px;
+}
+
+.social .link span {
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.social .link:hover {
+  padding: 20px;
+  color: white;
+  margin-left: -5px;
+  transform: translateX(10px) rotate(360deg);
+}
+
+.social .link.google-plus {
+  background-color: tomato;
+  color: white;
+}
+
+.social .link.twitter {
+  background-color: #00ACEE;
+  color: white;
+}
+
+.social .link.facebook {
+  background-color: #3B5998;
+  color: white;
+}
+
+
+
+.row {
+  display:  flex;
+  flex-wrap: nowrap;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+  flex: 50%;
+  padding: 100px;
+  top: 200px;
+  height: 50px; /* Should be removed. Only for demonstration */
+}
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other landscape*/
+@media    (max-width : 800px)   {
+  .column {
+    flex: 50%;
+     padding: 12em;
+    top: 150px;
+    height: 50px; /* Should be removed. Only for demonstration */
+  }
+  .row {
+    display: block;
+    flex-wrap: wrap;
+  }
+.social{
+  top: 120em;
+}
+}
+/*@media    (max-width : 1024px)   {*/
+  /*.column {*/
+    /*flex: 50%;*/
+    /*background-color: #5352ff;*/
+     /*padding: 30em;*/
+    /*top: 100px;*/
+    /*height: 50px; !* Should be removed. Only for demonstration *!*/
+  /*}*/
+  /*.row {*/
+    /*display: block;*/
+    /*flex-wrap: nowrap;*/
+  /*}*/
+/*.social{*/
+  /*top: 120em;*/
+/*}*/
+/*}*/
+
+
+@media screen and (min-width: 800px) and (orientation: landscape) {
+  .column {
+    flex: 50%;
+     padding: 15em;
+    top: 150px;
+    height: 50px; /* Should be removed. Only for demonstration */
+  }
+  .row {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .social{
+    top: 80em;
+  }
+}
+
+
+@media screen and (min-width: 800px) and (orientation: portrait) {
+  .column {
+    flex: 50%;
+
+    padding: 15em;
+    top: 150px;
+    height: 50px; /* Should be removed. Only for demonstration */
+  }
+  .row {
+    display: block;
+    flex-wrap: wrap;
+  }
+  .social{
+    top: 80em;
+  }
+}
+
